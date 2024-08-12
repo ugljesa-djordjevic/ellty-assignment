@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/style.css';
+import PageDropDown from './components/PageDropDown';
+
+// Example of some dynamical data that will hold the single source of truth(you need to change the name of pages on only one place and it automatically changes everywhere)
+const pages = ["Page 1", "Page 2", "Page 3", "Page 4"];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <PageDropDown pages={ pages } />
     </div>
   );
 }
